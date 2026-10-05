@@ -4,7 +4,30 @@ import gsap from "gsap";
 
 export const projects = [
   {
-    id: "asaaan",
+    id: "nest-living",
+    number: "02",
+    title: "NestLiving",
+    client: "Personal Project",
+    category: "Co-living Platform",
+    year: "2025",
+    shortDescription: "Co-living and roommate-matching platform built with Next.js.",
+    fullDescription:
+      "A full-stack co-living platform where users can find roommates, list available spaces, and manage co-living arrangements — built on Next.js 14 with Prisma and MongoDB Atlas.",
+    role: "Full Stack Developer",
+    technologies: ["Next.js 14", "Prisma", "MongoDB Atlas", "Tailwind CSS"],
+    features: [
+      "Roommate matching system",
+      "Listing creation and management",
+      "User authentication",
+      "Responsive design across devices",
+    ],
+    challenge: "Apna real challenge yahan likho.",
+    solution: "Apna real solution yahan likho.",
+    learnings: "Apna real learning yahan likho.",
+    githubLink: "https://github.com/thethinkingstack13-eng/nestliving",
+    liveLink: "https://nestliving-ten.vercel.app/"},
+  {
+    id: "Asaaan",
     number: "01",
     title: "Asaaan",
     client: "Personal Project",
@@ -28,30 +51,6 @@ export const projects = [
     liveLink: "",
   },
   {
-    id: "nest-living",
-    number: "02",
-    title: "Nest Living",
-    client: "Personal Project",
-    category: "Co-living Platform",
-    year: "2025",
-    shortDescription: "Co-living and roommate-matching platform built with Next.js.",
-    fullDescription:
-      "A full-stack co-living platform where users can find roommates, list available spaces, and manage co-living arrangements — built on Next.js 14 with Prisma and MongoDB Atlas.",
-    role: "Full Stack Developer",
-    technologies: ["Next.js 14", "Prisma", "MongoDB Atlas", "Tailwind CSS"],
-    features: [
-      "Roommate matching system",
-      "Listing creation and management",
-      "User authentication",
-      "Responsive design across devices",
-    ],
-    challenge: "Apna real challenge yahan likho.",
-    solution: "Apna real solution yahan likho.",
-    learnings: "Apna real learning yahan likho.",
-    githubLink: "https://github.com/thethinkingstack13-eng/nestliving",
-    liveLink: "",
-  },
-  {
     id: "notice-board",
     number: "03",
     title: "Notice Board",
@@ -72,8 +71,8 @@ export const projects = [
     challenge: "Apna real challenge yahan likho.",
     solution: "Apna real solution yahan likho.",
     learnings: "Apna real learning yahan likho.",
-    githubLink: "https://github.com/yourusername/notice-board",
-    liveLink: "",
+    githubLink: "https://github.com/Avik-Idealprogrammer/Notice-Board",
+    liveLink: "https://notice-board-kappa-one.vercel.app/",
   },
 ];
 

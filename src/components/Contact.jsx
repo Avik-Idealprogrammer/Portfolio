@@ -85,15 +85,16 @@ export default function Contact() {
 
       <Reveal delay={0.2}>
         <div className="flex flex-wrap gap-x-16 gap-y-4 mt-16 mb-20">
-          <LineHoverLink href="mailto:idealprogrammer01@gmail.com">idealprogrammer01@gmail.com</LineHoverLink>
+          <LineHoverLink href="mailto:idealprogrammer01@gmail.com">Gmail</LineHoverLink>
           <LineHoverLink href="https://www.linkedin.com/in/avik-gupta-84b35231b?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer">LinkedIn</LineHoverLink>
+          <LineHoverLink href="https://www.instagram.com/not_like_avik/?hl=en">Instagram</LineHoverLink>
         </div>
       </Reveal>
 
       <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row flex-wrap justify-between items-start md:items-center gap-4">
         <div className="flex flex-col gap-1">
-          <span className="text-sm text-gray-500">© 2026 Avik Gupta</span>
-          <span className="text-sm text-gray-500">Made with <span style={{ color: "#ff5722" }}>♥</span> by Avik Gupta</span>
+          <span className="text-sm text-gray-500">No Licence</span>
+          <span className="text-sm text-gray-500">Developed by Avik Gupta</span>
         </div>
         <a href="#top" className="text-sm text-gray-400 hover:text-orange-500 transition-colors flex items-center gap-1">Back to top ↑</a>
       </div>

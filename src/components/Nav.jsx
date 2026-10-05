@@ -86,7 +86,7 @@ export default function Nav() {
           <LineHoverText href="/#contact" className="text-xs md:text-sm tracking-widest font-medium">
             CONTACT
           </LineHoverText>
-          <LineHoverText href="/resume.pdf" target="_blank" className="text-xs md:text-sm tracking-widest font-medium">
+          <LineHoverText href="/google_resume.pdf" target="_blank" className="text-xs md:text-sm tracking-widest font-medium">
             <span className="inline-flex items-center gap-1">
               RESUME
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

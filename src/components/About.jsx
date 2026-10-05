@@ -42,14 +42,14 @@ export default function About() {
                     B.Tech, Computer Science Engineering
                   </h3>
                   <span className="text-sm text-gray-500 tracking-widest uppercase">
-                    2022 — 2026 {/* apna actual year */}
+                    2024 — 2028 {/* college years */}
                   </span>
                 </div>
                 <p className="text-gray-400 mt-1">
                   Deen Dayal Upadhyaya Gorakhpur University
                 </p>
                 <p className="text-sm text-gray-500 mt-2 tracking-wide">
-                  CGPA: X.XX / 10 {/* apna actual CGPA */}
+                  CGPA: 7.40 / 10 {/* till 4sem */}
                 </p>
               </div>
 
@@ -59,14 +59,14 @@ export default function About() {
                     Senior Secondary (XII)
                   </h3>
                   <span className="text-sm text-gray-500 tracking-widest uppercase">
-                    Apna year
+                    2022 — 2024
                   </span>
                 </div>
                 <p className="text-gray-400 mt-1">
-                  Apna school naam
+                  HLP international School
                 </p>
                 <p className="text-sm text-gray-500 mt-2 tracking-wide">
-                  Percentage: XX% {/* ya CGPA, jo bhi apply ho */}
+                  Percentage: 74% {/* pata hai ki kam aaya hai */}
                 </p>
               </div>
 
@@ -76,14 +76,14 @@ export default function About() {
                     Secondary (X)
                   </h3>
                   <span className="text-sm text-gray-500 tracking-widest uppercase">
-                    Apna year
+                    2020 — 2022
                   </span>
                 </div>
                 <p className="text-gray-400 mt-1">
-                  Apna school naam
+                  Albright Global School
                 </p>
                 <p className="text-sm text-gray-500 mt-2 tracking-wide">
-                  Percentage: XX%
+                  Percentage: 79.90%
                 </p>
               </div>
 
@@ -135,8 +135,8 @@ export default function About() {
             </span>
             <div className="flex flex-wrap gap-3 mb-16">
               {[
-                "Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs",
-                "Docker", "Git", "React", "System Design", "Java",
+                "Node.js", "Express", "MongoDB", "PostgreSQL", "SQL","REST APIs",
+                "Docker", "Git", "React", "System Design", "Java", "Tailwind CSS",
               ].map((skill) => (
                 <span
                   key={skill}
@@ -152,7 +152,7 @@ export default function About() {
           <Reveal delay={0.4}>
             <div className="flex flex-wrap gap-6">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/Avik-Idealprogrammer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm tracking-widest uppercase border border-gray-700 px-6 py-3 rounded-full hover:border-orange-500 hover:text-orange-500 transition-colors"
@@ -160,12 +160,13 @@ export default function About() {
                 GitHub ↗
               </a>
               <a
-                href="/resume.pdf"
+                href="/google_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm tracking-widest uppercase border border-gray-700 px-6 py-3 rounded-full hover:border-orange-500 hover:text-orange-500 transition-colors"
               >
-                Resume ↓
+                Resume ↗
+                
               </a>
             </div>
           </Reveal>
