@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap:https://portfolio-self-gamma-e4y03q39vv.vercel.app/
