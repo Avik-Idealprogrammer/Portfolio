@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import gsap from "gsap";
-import Reveal from "./Reveal";
+import Reveal from "./reveal";
 
 function LetsTalkHeading() {
   const talkRef = useRef(null);
