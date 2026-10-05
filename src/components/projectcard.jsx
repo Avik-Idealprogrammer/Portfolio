@@ -1,4 +1,4 @@
-import Reveal from "./Reveal";
+import Reveal from "./reveal";
 
 export default function ProjectCard({ title, description, image }) {
   return (
