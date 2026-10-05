@@ -22,7 +22,7 @@ export default function Hero() {
         <HeroText />
         <RiseText
           as="p"
-          text="Five years across government, health and industry. Now working with frontier AI labs."
+          text="I build the backend nobody sees — APIs, databases, systems that just work."
           className="text-lg md:text-xl text-gray-400 mt-10 max-w-xl leading-relaxed"
           delay={0.7}
         />

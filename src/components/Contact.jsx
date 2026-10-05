@@ -7,7 +7,7 @@ function LetsTalkHeading() {
   const lineRef = useRef(null);
 
   const showEffect = () => {
-    gsap.to(talkRef.current, { color: "#ff2d2d", duration: 0.3, ease: "power2.out" });
+    gsap.to(talkRef.current, { color: "#ff5722", duration: 0.3, ease: "power2.out" });
     gsap.set(lineRef.current, { transformOrigin: "left" });
     gsap.to(lineRef.current, { scaleX: 1, duration: 0.4, ease: "power2.out" });
   };
@@ -84,16 +84,16 @@ export default function Contact() {
       </Reveal>
 
       <Reveal delay={0.2}>
-        <div className="flex flex-wrap gap-x-16 gap-y-4 mt-16 mb-32">
-          <LineHoverLink href="mailto:youremail@example.com">youremail@example.com</LineHoverLink>
-          <LineHoverLink href="#" target="_blank" rel="noopener noreferrer">LinkedIn</LineHoverLink>
+        <div className="flex flex-wrap gap-x-16 gap-y-4 mt-16 mb-20">
+          <LineHoverLink href="mailto:idealprogrammer01@gmail.com">idealprogrammer01@gmail.com</LineHoverLink>
+          <LineHoverLink href="https://www.linkedin.com/in/avik-gupta-84b35231b?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer">LinkedIn</LineHoverLink>
         </div>
       </Reveal>
 
       <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row flex-wrap justify-between items-start md:items-center gap-4">
         <div className="flex flex-col gap-1">
           <span className="text-sm text-gray-500">© 2026 Avik Gupta</span>
-          <span className="text-sm text-gray-500">Made with <span style={{ color: "#ff5722" }}>♥</span> using React & GSAP</span>
+          <span className="text-sm text-gray-500">Made with <span style={{ color: "#ff5722" }}>♥</span> by Avik Gupta</span>
         </div>
         <a href="#top" className="text-sm text-gray-400 hover:text-orange-500 transition-colors flex items-center gap-1">Back to top ↑</a>
       </div>

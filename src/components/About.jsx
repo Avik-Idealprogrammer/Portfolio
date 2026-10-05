@@ -5,61 +5,168 @@ export default function About() {
     <section
       id="about"
       className="border-t border-gray-800 px-6 md:px-[69.12px]"
-      style={{ paddingTop: "80px", paddingBottom: "80px" }}
+      style={{ paddingTop: "80px", paddingBottom: "80px", color: "#F5F0EB" }}
     >
-      {/* ===== GRID: left column sticky, right column content ===== */}
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
-
-        {/* ===== LEFT: "ABOUT" label — sticky rehta hai jab tak section scroll ho raha hai ===== */}
         <div className="relative">
           <span
             className="md:sticky text-sm tracking-[0.2em] text-gray-400 uppercase font-medium block"
             style={{ top: "120px" }}
-          // ^ 120px = navbar ke neeche kitni space chhod ke stick ho. Nav height ke hisab se adjust karo
           >
             About
           </span>
         </div>
 
-        {/* ===== RIGHT: content ===== */}
         <div>
+          {/* ===== INTRO HEADING ===== */}
           <Reveal>
             <p
-              className="about-lede about-reveal font-bold mb-10 text-[28px] md:text-[38px] lg:text-[46.4px]"
-              style={{ lineHeight: "1.15", color: "#F5F0EB" }}
+              className="font-bold mb-16 text-[28px] md:text-[38px] lg:text-[46px]"
+              style={{ lineHeight: "1.15" }}
             >
-              I'm a backend developer who builds <br />
-              systems that scale, stay reliable, <br />
-              and just work.
+              I'm a backend-focused developer who builds <br className="hidden md:block" />
+              practical, scalable web applications.
             </p>
           </Reveal>
 
+          {/* ===== EDUCATION ===== */}
           <Reveal delay={0.1}>
-            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mb-16">
-              I spent time building and maintaining backend systems across different domains.
-              I'm based in India, working on APIs, databases, and infrastructure that power real products.
-            </p>
-          </Reveal>
+            <span className="text-sm tracking-[0.2em] text-gray-400 uppercase font-medium block mb-8">
+              Education
+            </span>
+            <div className="space-y-10 mb-20">
 
-          {/* ===== SKILLS TAGS ===== */}
-          <Reveal delay={0.2}>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm tracking-widest text-gray-400 uppercase font-medium mb-20">
-              <span>Node.js</span><span className="text-gray-600">·</span>
-              <span>Databases</span><span className="text-gray-600">·</span>
-              <span>API Design</span><span className="text-gray-600">·</span>
-              <span>System Architecture</span><span className="text-gray-600">·</span>
-              <span>DevOps</span>
+              <div className="relative pl-6 border-l-2" style={{ borderColor: "#ff5722" }}>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                  <h3 className="text-xl md:text-2xl font-bold">
+                    B.Tech, Computer Science Engineering
+                  </h3>
+                  <span className="text-sm text-gray-500 tracking-widest uppercase">
+                    2022 — 2026 {/* apna actual year */}
+                  </span>
+                </div>
+                <p className="text-gray-400 mt-1">
+                  Deen Dayal Upadhyaya Gorakhpur University
+                </p>
+                <p className="text-sm text-gray-500 mt-2 tracking-wide">
+                  CGPA: X.XX / 10 {/* apna actual CGPA */}
+                </p>
+              </div>
+
+              <div className="relative pl-6 border-l-2 border-gray-700">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                  <h3 className="text-xl md:text-2xl font-bold">
+                    Senior Secondary (XII)
+                  </h3>
+                  <span className="text-sm text-gray-500 tracking-widest uppercase">
+                    Apna year
+                  </span>
+                </div>
+                <p className="text-gray-400 mt-1">
+                  Apna school naam
+                </p>
+                <p className="text-sm text-gray-500 mt-2 tracking-wide">
+                  Percentage: XX% {/* ya CGPA, jo bhi apply ho */}
+                </p>
+              </div>
+
+              <div className="relative pl-6 border-l-2 border-gray-700">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                  <h3 className="text-xl md:text-2xl font-bold">
+                    Secondary (X)
+                  </h3>
+                  <span className="text-sm text-gray-500 tracking-widest uppercase">
+                    Apna year
+                  </span>
+                </div>
+                <p className="text-gray-400 mt-1">
+                  Apna school naam
+                </p>
+                <p className="text-sm text-gray-500 mt-2 tracking-wide">
+                  Percentage: XX%
+                </p>
+              </div>
+
             </div>
           </Reveal>
 
-          {/* ===== RECOGNITION ===== */}
-          <Reveal delay={0.3}>
-            <span className="text-sm tracking-[0.2em] text-gray-400 uppercase font-medium block mb-4">
-              Recognition
+          {/* ===== EXPERIENCE ===== */}
+          <Reveal delay={0.2}>
+            <span className="text-sm tracking-[0.2em] text-gray-400 uppercase font-medium block mb-8">
+              Experience
             </span>
-            <div className="border-t border-gray-800 pt-4 space-y-2 text-gray-500 text-sm">
-              <p>Add any awards, certifications, or notable mentions here.</p>
-              <p>Contributed to open-source projects and internal tools.</p>
+            <div className="space-y-10 mb-20">
+
+              <div className="relative pl-6 border-l-2" style={{ borderColor: "#ff5722" }}>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                  <h3 className="text-xl md:text-2xl font-bold">
+                    Head of Event Management
+                  </h3>
+                  <span className="text-sm text-gray-500 tracking-widest uppercase">
+                    Current
+                  </span>
+                </div>
+                <p className="text-gray-400 mt-1">
+                  IET TechSphere — 100+ member technical community
+                </p>
+              </div>
+
+              <div className="relative pl-6 border-l-2 border-gray-700">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                  <h3 className="text-xl md:text-2xl font-bold">
+                    Open Source Contributor
+                  </h3>
+                  <span className="text-sm text-gray-500 tracking-widest uppercase">
+                    2026
+                  </span>
+                </div>
+                <p className="text-gray-400 mt-1">
+                  GSSoC 2026 — Open Source & AI/Agents tracks
+                </p>
+              </div>
+
+            </div>
+          </Reveal>
+
+          {/* ===== SKILLS ===== */}
+          <Reveal delay={0.3}>
+            <span className="text-sm tracking-[0.2em] text-gray-400 uppercase font-medium block mb-6">
+              Skills
+            </span>
+            <div className="flex flex-wrap gap-3 mb-16">
+              {[
+                "Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs",
+                "Docker", "Git", "React", "System Design", "Java",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="text-sm px-4 py-2 border border-gray-700 rounded-full text-gray-300"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* ===== LINKS ===== */}
+          <Reveal delay={0.4}>
+            <div className="flex flex-wrap gap-6">
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm tracking-widest uppercase border border-gray-700 px-6 py-3 rounded-full hover:border-orange-500 hover:text-orange-500 transition-colors"
+              >
+                GitHub ↗
+              </a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm tracking-widest uppercase border border-gray-700 px-6 py-3 rounded-full hover:border-orange-500 hover:text-orange-500 transition-colors"
+              >
+                Resume ↓
+              </a>
             </div>
           </Reveal>
         </div>

@@ -9,6 +9,8 @@ export default function HeroText() {
   const highlightRef = useRef(null);
 
   useEffect(() => {
+    const isTouchDevice = window.matchMedia("(hover: none)").matches;
+
     const split1 = new SplitType(line1Ref.current, { types: "words, chars" });
     const split2 = new SplitType(line2Ref.current, { types: "words, chars" });
     const splitHighlight = new SplitType(highlightRef.current, { types: "words, chars" });
@@ -16,12 +18,27 @@ export default function HeroText() {
     const allWhiteChars = [...split1.chars, ...split2.chars];
     const highlightChars = splitHighlight.chars;
 
+    // ===== LOAD ANIMATION =====
+    // Mobile pe WORDS animate hote hain (kerning/spacing sahi rehta hai)
+    // Desktop pe CHARS animate hote hain (zyada detailed effect, magnetic hover ke liye zaroori)
+    const animTargets = isTouchDevice
+      ? [...split1.words, ...split2.words, ...splitHighlight.words]
+      : [...allWhiteChars, ...highlightChars];
+
     gsap.fromTo(
-      [...allWhiteChars, ...highlightChars],
+      animTargets,
       { yPercent: 120, opacity: 0 },
-      { yPercent: 0, opacity: 1, duration: 1, stagger: 0.02, ease: "power4.out", delay: 0.2 }
+      {
+        yPercent: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: isTouchDevice ? 0.06 : 0.02, // words thode slower stagger pe achhe lagte hain
+        ease: "power4.out",
+        delay: 0.2,
+      }
     );
 
+    // ===== MAGNETIC HOVER — sirf desktop pe =====
     const handleMouseMove = (e) => {
       allWhiteChars.forEach((char) => {
         const rect = char.getBoundingClientRect();
@@ -42,17 +59,19 @@ export default function HeroText() {
       });
     };
 
-    highlightChars.forEach((char) => {
-      char.addEventListener("mouseenter", () => {
-        gsap.to(char, { scale: 1.2, duration: 0.35, ease: "back.out(2)" });
+    // ===== "users." HOVER — sirf desktop pe =====
+    if (!isTouchDevice) {
+      highlightChars.forEach((char) => {
+        char.addEventListener("mouseenter", () => {
+          gsap.to(char, { scale: 1.2, duration: 0.35, ease: "back.out(2)" });
+        });
+        char.addEventListener("mouseleave", () => {
+          gsap.to(char, { scale: 1, duration: 0.4, ease: "power2.out" });
+        });
       });
-      char.addEventListener("mouseleave", () => {
-        gsap.to(char, { scale: 1, duration: 0.4, ease: "power2.out" });
-      });
-    });
+    }
 
     const container = containerRef.current;
-    const isTouchDevice = window.matchMedia("(hover: none)").matches;
     if (!isTouchDevice) {
       container.addEventListener("mousemove", handleMouseMove);
     }
@@ -67,18 +86,18 @@ export default function HeroText() {
   return (
     <div ref={containerRef} className="relative z-10 w-full">
       <h1
-        className="font-bold leading-[0.9] tracking-tight text-[40px] sm:text-[56px] md:text-[90px] lg:text-[144px]"
+        className="font-bold leading-[1.1] md:leading-[0.9] tracking-tight text-[40px] sm:text-[56px] md:text-[90px] lg:text-[144px]"
         style={{ color: "#F5F0EB" }}
       >
         <div ref={line1Ref} className="overflow-hidden py-1">Designing products</div>
         <div className="flex flex-wrap items-baseline gap-x-4">
-          <span ref={line2Ref} className="overflow-hidden py-1">used by</span>
+          <span ref={line2Ref} className="overflow-hidden py-1">used by real</span>
           <span
             ref={highlightRef}
             className="italic overflow-hidden inline-block"
             style={{ color: "#ff5722" }}
           >
-            millions.
+            users.
           </span>
         </div>
       </h1>

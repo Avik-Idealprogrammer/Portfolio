@@ -2,30 +2,78 @@ import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import gsap from "gsap";
 
-const projects = [
+export const projects = [
   {
-    id: "national-telehealth",
+    id: "asaaan",
     number: "01",
-    title: "Notice Board",       // <-- apna project naam yahan
-    client: "DDU Gorakhpur",         // <-- client/company naam
-    category: "Health",                  // <-- category/industry
-    year: "2023–25",                     // <-- saal
+    title: "Asaaan",
+    client: "Personal Project",
+    category: "SaaS / Restaurant Tech",
+    year: "2025",
+    shortDescription: "QR-based table ordering platform for Indian restaurants.",
+    fullDescription:
+      "A SaaS platform that lets restaurants set up QR-code based table ordering — customers scan a code at their table, browse the menu, and order directly without needing a waiter.",
+    role: "Full Stack Developer",
+    technologies: ["Node.js", "Express", "MongoDB", "React", "REST APIs"],
+    features: [
+      "QR code generation per table",
+      "Live menu management for restaurant owners",
+      "Real-time order tracking",
+      "Admin dashboard for order history",
+    ],
+    challenge: "Apna real challenge yahan likho.",
+    solution: "Apna real solution yahan likho.",
+    learnings: "Apna real learning yahan likho.",
+    githubLink: "https://github.com/yourusername/asaaan",
+    liveLink: "",
   },
   {
-    id: "industrial-monitoring",
+    id: "nest-living",
     number: "02",
-    title: "Industrial Monitoring",
-    client: "Client Name",
-    category: "Industry 4.0",
-    year: "2022–24",
+    title: "Nest Living",
+    client: "Personal Project",
+    category: "Co-living Platform",
+    year: "2025",
+    shortDescription: "Co-living and roommate-matching platform built with Next.js.",
+    fullDescription:
+      "A full-stack co-living platform where users can find roommates, list available spaces, and manage co-living arrangements — built on Next.js 14 with Prisma and MongoDB Atlas.",
+    role: "Full Stack Developer",
+    technologies: ["Next.js 14", "Prisma", "MongoDB Atlas", "Tailwind CSS"],
+    features: [
+      "Roommate matching system",
+      "Listing creation and management",
+      "User authentication",
+      "Responsive design across devices",
+    ],
+    challenge: "Apna real challenge yahan likho.",
+    solution: "Apna real solution yahan likho.",
+    learnings: "Apna real learning yahan likho.",
+    githubLink: "https://github.com/thethinkingstack13-eng/nestliving",
+    liveLink: "",
   },
   {
-    id: "remote-lab",
+    id: "notice-board",
     number: "03",
-    title: "Remote Laboratory",
-    client: "University Client",
-    category: "Education",
-    year: "2024",
+    title: "Notice Board",
+    client: "Personal Project",
+    category: "MERN / Local Business Platform",
+    year: "2025",
+    shortDescription: "Local digital notice board and business ad platform.",
+    fullDescription:
+      "A MERN stack platform letting local businesses and communities post digital notices and advertisements — built from a full PRD to a deployed product.",
+    role: "Full Stack Developer",
+    technologies: ["MongoDB", "Express", "React", "Node.js"],
+    features: [
+      "Notice posting and categorization",
+      "Local business ad listings",
+      "Search and filter functionality",
+      "Admin moderation panel",
+    ],
+    challenge: "Apna real challenge yahan likho.",
+    solution: "Apna real solution yahan likho.",
+    learnings: "Apna real learning yahan likho.",
+    githubLink: "https://github.com/yourusername/notice-board",
+    liveLink: "",
   },
 ];
 
@@ -97,7 +145,7 @@ className="flex items-center justify-between py-8 md:py-12 border-b border-gray-
 export default function Work() {
   return (
     // ===== SECTION PADDING: px-10 md:px-16 (left-right), py-24 (top-bottom) =====
-    <section id="work" className="px-10 md:px-69.12 py-60">
+    <section id="work" className="px-6 md:px-[69.12px] py-10 md:py-24">
       <div className="flex items-center justify-between mb-12">
         <span className="text-sm tracking-[0.2em] text-gray-400 uppercase font-medium">
           Selected Work
